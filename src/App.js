@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Style/App.css';
 import LoadingScreen from './Components/LoadingScreen';
-import Form from './Components/SearchBar'
+import Form from './Components/SearchBar';
 import WeatherDetailsRight from './Components/WeatherDetailsRight';
 import WeatherSummaryLeft from './Components/WeatherSummaryLeft';
 
 import 'weather-icons/css/weather-icons.css';
 
-const API_KEY = "ee7908d028e3f01465f7626710ff3aef";
+const API_KEY = 'ee7908d028e3f01465f7626710ff3aef';
 
 class App extends Component {
   constructor(props) {
@@ -30,11 +30,12 @@ class App extends Component {
     };
   }
 
-
-  getWeather = async (e) => {
+  getWeather = async e => {
     e.preventDefault();
     const zipCode = e.target.elements.zipCode.value;
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&appid=${API_KEY}&units=metric`);
+    const api_call = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&appid=${API_KEY}&units=metric`
+    );
     const data = await api_call.json();
     if (zipCode) {
       this.setState({
@@ -50,7 +51,7 @@ class App extends Component {
         sunrise: data.sys.sunrise,
         sunset: data.sys.sunset,
         isLoading: false,
-        error: ""
+        error: ''
       });
     } else {
       this.setState({
@@ -59,40 +60,38 @@ class App extends Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
-        error: "Please enter the values."
+        error: 'Please enter the values.'
       });
     }
-  }
-
-
+  };
 
   render() {
-
     return (
-    <div id="background">
-      <Form getWeather={this.getWeather} />
-      { this.state.isLoading ? <LoadingScreen /> :
-        <div className="card-container">
-          <WeatherSummaryLeft 
-            city={this.state.city}
-            country={this.state.country}
-            description={this.state.description}
-            weatherId={this.state.weatherId}
-          />
-          <WeatherDetailsRight 
-            temperature={this.state.temperature} 
-            tempMin={this.state.tempMin}
-            tempMax={this.state.tempMax}
-            humidity={this.state.humidity}
-            wind={this.state.wind}
-            sunrise={this.state.sunrise}
-            sunset={this.state.sunset}
-            error={this.state.error}
-          />
-        </div>
-      }
-
-    </div>
+      <div id="background">
+        <Form getWeather={this.getWeather} />
+        {this.state.isLoading ? (
+          <LoadingScreen />
+        ) : (
+          <div className="card-container">
+            <WeatherSummaryLeft
+              city={this.state.city}
+              country={this.state.country}
+              description={this.state.description}
+              weatherId={this.state.weatherId}
+            />
+            <WeatherDetailsRight
+              temperature={this.state.temperature}
+              tempMin={this.state.tempMin}
+              tempMax={this.state.tempMax}
+              humidity={this.state.humidity}
+              wind={this.state.wind}
+              sunrise={this.state.sunrise}
+              sunset={this.state.sunset}
+              error={this.state.error}
+            />
+          </div>
+        )}
+      </div>
     );
   }
 }
