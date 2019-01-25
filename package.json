@@ -2,7 +2,7 @@
   "name": "weather_app_2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "hhtps://emgiust.github.io/react-weather-app",
+  "homepage": "https://emgiust.github.io/react-weather-app",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "lodash": "^4.17.10",
