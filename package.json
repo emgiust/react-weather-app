@@ -2,7 +2,9 @@
   "name": "weather_app_2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "hhtps://emgiust.github.io/react-weather-app",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.10",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -10,6 +12,7 @@
     "weather-icons": "^1.3.2"
   },
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

@@ -1,47 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 
-
 .App {
-  	text-align: center;
-  	font-family: 'IBM Plex Mono', monospace;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 #background {
-	height: 100vh;
-	background-image: url('https://images.unsplash.com/photo-1523477725095-77d6dfdafdec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=01f2b2600db6d9988b76ef42322cc9a6&auto=format&fit=crop&w=1650&q=80');
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1523477725095-77d6dfdafdec?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=01f2b2600db6d9988b76ef42322cc9a6&auto=format&fit=crop&w=1650&q=80');
 }
 
 .container {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	justify-content: center;
-	align-items: center;
-	padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
 .loading-screen {
-	font-family: 'IBM Plex Mono', monospace;
-	margin-top: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 20px;
 }
 
-input[type="text"] {
-	background-color: white !important;
-	border: 1px solid black;
-	width: 30%;
-	padding: 5px;
-	font-weight: lighter;
-	letter-spacing: 2px;
-	margin-right: 20px;
-	font-size: 20px;
+input[type='text'] {
+  background-color: white !important;
+  border: 1px solid black;
+  width: 30%;
+  padding: 5px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
@@ -50,135 +47,132 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-input[type="text"] { 
-   outline: none;
+input[type='text'] {
+  outline: none;
 }
 
 button {
-	border: 1px solid black;
-	padding: 8px 20px;
-	border-radius: 2px;
-	font-weight: lighter;
-	letter-spacing: 1px;
-	font-size: 15px;
-	cursor: pointer;
-	background-color: white;
-	color: black;
-	font-weight: 100;
+  border: 1px solid black;
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-weight: 100;
 }
 
 button:active {
-  	outline: none;
-  	border: none;
+  outline: none;
+  border: none;
 }
 
 button:focus {
-	outline:0;
+  outline: 0;
 }
 
 .card-container {
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-	position: relative;
-	width: 450px;
-	height: 550px;
-	margin-top: 60px;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
-	border-left: 2px solid black;
-	font-family: 'IBM Plex Mono', monospace;
-	background-color: white;
-	box-shadow: 5px 5px black;
-	color: #363334;
+  position: relative;
+  width: 450px;
+  height: 550px;
+  margin-top: 60px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: white;
+  box-shadow: 5px 5px black;
+  color: #363334;
 }
 
 .left-card {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .right-card {
-	border: 2px solid black;
-	background-color: #363334;
-	color: white;
+  border: 2px solid black;
+  background-color: #363334;
+  color: white;
 }
 
 .column {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .row {
-	display: flex;
-	flex-direction: row;
-	align-content: space-between;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .city {
-	padding-top: 30px;
-	font-size: 40px;
-	letter-spacing: 1px;
+  padding-top: 30px;
+  font-size: 40px;
+  letter-spacing: 1px;
 }
 
 .icon {
-	font-size: 170px;
-	padding: 10px;
-	margin: 20px;
+  font-size: 170px;
+  padding: 10px;
+  margin: 20px;
 }
 
 .description {
-	text-align: center;
-	letter-spacing: 1px;
-	width: 150px;
-	margin-top: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 150px;
+  margin-top: 40px;
 }
 
 .summary-container {
-	width: 300px;
-	margin-top: -55px;
+  width: 300px;
+  margin-top: -55px;
 }
 
 .details-container {
-	display: inline;
-	width: 110px;
+  display: inline;
+  width: 110px;
 }
 
 .temperature {
-	font-size: 140px;
+  font-size: 140px;
 }
 
 .details-container h2 {
-	border-bottom: 1px solid white;
-	letter-spacing: 2px;
-	font-size: 20px;
+  border-bottom: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 20px;
 }
 
 .details-container p {
-	margin-top: -5px;
-	font-size: 11px;
+  margin-top: -5px;
+  font-size: 11px;
 }
 
 .misc-container {
-	margin-top: -50px;
+  margin-top: -50px;
 }
 
 .misc {
-	width: 300px;
-	margin-top: -
+  width: 300px;
+  margin-top: 0;
 }
 
 .misc p {
-	letter-spacing: 1px;
+  letter-spacing: 1px;
 }
-
-
-
