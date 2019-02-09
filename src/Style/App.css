@@ -65,8 +65,8 @@ button {
 }
 
 button:active {
-  outline: none;
-  border: none;
+  color: grey;
+  border: 1px solid grey;
 }
 
 button:focus {

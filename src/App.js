@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Style/App.css';
 import LoadingScreen from './Components/LoadingScreen';
-import Form from './Components/SearchBar';
+import Form from './Components/Form';
 import WeatherDetailsRight from './Components/WeatherDetailsRight';
 import WeatherSummaryLeft from './Components/WeatherSummaryLeft';
 
@@ -53,41 +53,48 @@ class App extends Component {
         isLoading: false,
         error: ''
       });
-    } else {
-      this.setState({
-        temperature: undefined,
-        city: undefined,
-        country: undefined,
-        humidity: undefined,
-        description: undefined,
-        error: 'Please enter the values.'
-      });
     }
   };
 
   render() {
+    const {
+      city,
+      country,
+      description,
+      weatherId,
+      temperature,
+      tempMin,
+      tempMax,
+      humidity,
+      wind,
+      sunrise,
+      sunset,
+      isLoading,
+      error
+    } = this.state;
+
     return (
       <div id="background">
         <Form getWeather={this.getWeather} />
-        {this.state.isLoading ? (
+        {isLoading ? (
           <LoadingScreen />
         ) : (
           <div className="card-container">
             <WeatherSummaryLeft
-              city={this.state.city}
-              country={this.state.country}
-              description={this.state.description}
-              weatherId={this.state.weatherId}
+              city={city}
+              country={country}
+              description={description}
+              weatherId={weatherId}
             />
             <WeatherDetailsRight
-              temperature={this.state.temperature}
-              tempMin={this.state.tempMin}
-              tempMax={this.state.tempMax}
-              humidity={this.state.humidity}
-              wind={this.state.wind}
-              sunrise={this.state.sunrise}
-              sunset={this.state.sunset}
-              error={this.state.error}
+              temperature={temperature}
+              tempMin={tempMin}
+              tempMax={tempMax}
+              humidity={humidity}
+              wind={wind}
+              sunrise={sunrise}
+              sunset={sunset}
+              error={error}
             />
           </div>
         )}
